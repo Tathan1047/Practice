@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block contenido %}
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Actualizar Libros</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Nombre">Nombre de Libro</label>
+  <div class="col-md-4">
+  <input id="Nombre" name="Nombre" placeholder="Digite Nombre " class="form-control input-md" required="" type="text">
+  <span class="help-block">Nombre de libro </span>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="categoria">Categoria</label>
+  <div class="col-md-4">
+  <input id="categoria" name="categoria" placeholder="Digite Categoria" class="form-control input-md" required="" type="text">
+  <span class="help-block">Categoria del Libro</span>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Autor</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+    </select>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="enviar"></label>
+  <div class="col-md-4">
+    <button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+{% endblock %}

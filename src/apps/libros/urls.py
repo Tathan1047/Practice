@@ -4,5 +4,7 @@ from apps.libros import views
 
 urlpatterns = [
     url(r'^inicio/', views.inicio,name="inicio"),
+    url(r'^crear/', views.crear, name="crear"),
+    url(r'^actualizar/', views.actualizar, name="actualizar"),
 
 ]
