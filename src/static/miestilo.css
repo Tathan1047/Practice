@@ -1,0 +1,17 @@
+.contedenor {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-left:40px;
+}
+
+.label {
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 15px;
+
+}
+
+.input {
+    width: 400px;
+
+}

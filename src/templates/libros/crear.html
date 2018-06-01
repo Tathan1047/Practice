@@ -3,15 +3,18 @@
 <form class="form-horizontal">
 <fieldset>
 
+    <div class="container col-md-12, contedenor">
+  <!-- Content here -->
+
 <!-- Form Name -->
-<legend>Registro Libros</legend>
+<h1><legend>Registro Libros</legend></h1>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Nombre">Nombre de Libro</label>
+  <label class="col-md-4 control-label label" for="Nombre">Nombre de Libro</label>
   <div class="col-md-4">
-  <input id="Nombre" name="Nombre" placeholder="Digite Nombre " class="form-control input-md" required="" type="text">
-  <span class="help-block">Nombre de libro </span>
+  <input id="Nombre" name="Nombre" placeholder="Digite Nombre " class="form-control input-md input " required="" type="text">
+
   </div>
 </div>
 
@@ -19,14 +22,14 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="categoria">Categoria</label>
   <div class="col-md-4">
-  <input id="categoria" name="categoria" placeholder="Digite Categoria" class="form-control input-md" required="" type="text">
-  <span class="help-block">Categoria del Libro</span>
+  <input id="categoria" name="categoria" placeholder="Digite Categoria" class="form-control input-md  input" required="" type="text">
+
   </div>
 </div>
 
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Autor</label>
+  <label class="col-md-4 control-label input" for="selectbasic">Autor</label>
   <div class="col-md-4">
     <select id="selectbasic" name="selectbasic" class="form-control">
     </select>
@@ -40,7 +43,9 @@
     <button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
   </div>
 </div>
-
+</div>
 </fieldset>
+
 </form>
+
 {% endblock %}
