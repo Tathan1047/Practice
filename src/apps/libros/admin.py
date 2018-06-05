@@ -11,7 +11,7 @@ class AdminLibro(admin.ModelAdmin):
     list_display = ['id', 'nombre', 'categoria','autor']
 
 class AdminCategoria(admin.ModelAdmin):
-    list_display = ('id', 'categoria',)
+    list_display = ('id', 'nombre',)
 
 
 admin.site.register(Libros, AdminLibro)

@@ -1,51 +1,13 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% extends 'base.html' %}
 {% block contenido %}
-<form class="form-horizontal">
-<fieldset>
-
-    <div class="container col-md-12, contedenor">
-  <!-- Content here -->
-
-<!-- Form Name -->
-<h1><legend>Registro Libros</legend></h1>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label label" for="Nombre">Nombre de Libro</label>
-  <div class="col-md-4">
-  <input id="Nombre" name="Nombre" placeholder="Digite Nombre " class="form-control input-md input " required="" type="text">
-
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="categoria">Categoria</label>
-  <div class="col-md-4">
-  <input id="categoria" name="categoria" placeholder="Digite Categoria" class="form-control input-md  input" required="" type="text">
-
-  </div>
-</div>
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label input" for="selectbasic">Autor</label>
-  <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-    </select>
-  </div>
-</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="enviar"></label>
-  <div class="col-md-4">
-    <button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
-  </div>
-</div>
-</div>
-</fieldset>
-
+<div class="container">
+    <div class="col sm-6">
+        <form method="post">
+    {% csrf_token %}
+    {{  form.as_p }}
+    <button type="submit">Guardar</button>
 </form>
-
+    </div>
+</div>
 {% endblock %}

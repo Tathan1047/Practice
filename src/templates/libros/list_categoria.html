@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+        <th scope="col">Categoria</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for cat in categorias %}
+    <tr>
+      <th scope="row">{{ cat.id }}</th>
+      <td>{{ cat.nombre }}</td>
+
+
+
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

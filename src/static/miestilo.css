@@ -1,8 +1,7 @@
 .contedenor {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40px;
-    padding-left:40px;
+
 }
 
 .label {
@@ -11,7 +10,9 @@
 
 }
 
-.input {
-    width: 400px;
 
+h1 {
+    font-weight:bolder;
+    text-align: center;
+    padding-top: auto;
 }
