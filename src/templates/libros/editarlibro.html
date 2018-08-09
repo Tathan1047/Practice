@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% block contenido %}
-<form method="post">
+<div class="container col-md-4 owner ">
+    <div class="col sm-6">
+        <h1>Editar Libros</h1>
+    <form method="post">
     {% csrf_token %}
     {{  form.as_p }}
     <button type="submit">Editar</button>
-</form>
+    </form>
+    </div>
+</div>
 {% endblock %}

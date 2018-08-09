@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}List Books{% endblock %}
+{% block titlecontent %}Create Categories{% endblock %}
+{% block titleform %}Register New Categories{% endblock %}
+{% block content %}
+        <form method="post">
+    {% csrf_token %}
+    {{  form.as_p }}
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
+
+
+{% endblock %}

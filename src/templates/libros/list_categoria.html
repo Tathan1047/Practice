@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-
-{% block contenido %}
-<table class="table table-bordered">
+{% block title %}List Books{% endblock %}
+{% block titlecontent %}List Categories{% endblock %}
+{% block titleform %}List All Categories{% endblock %}
+{% block content %}
+<div class="container-fluid col-md-6">
+<table class="table table-bordered ">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -9,16 +12,15 @@
     </tr>
   </thead>
   <tbody>
-  {% for cat in categorias %}
+  {% for cat in object_list %}
     <tr>
       <th scope="row">{{ cat.id }}</th>
-      <td>{{ cat.nombre }}</td>
-
-
-
-
+      <td>{{ cat.categoria }}</td>
+      <td><a href="{% url 'libros:editarcategoria' cat.id %}" class="btn btn-sm btn-success"> <span class="glyphicon glyphicon-edit"></span><span>Editar</span></a></td>
+      <td><a href="{% url 'libros:eliminarcategoria' cat.id %}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-erase"></span><span>Eliminar</span></a></td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
+</div>
 {% endblock %}

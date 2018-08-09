@@ -1,26 +1,29 @@
 {% extends 'base.html' %}
+{% block title %}List Books{% endblock %}
+{% block content %}
 
-{% block contenido %}
 <table class="table table-bordered">
-  <thead>
+  <thead class="thead-light">
     <tr>
       <th scope="col">#</th>
         <th scope="col">Nombre</th>
         <th scope="col">Categoria</th>
+        <th scope="col">Editorial</th>
         <th scope="col">Autor</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
     </tr>
   </thead>
   <tbody>
-  {% for lib in libros %}
+  {% for lib in object_list %}
     <tr>
       <th scope="row">{{ lib.id }}</th>
-      <td>{{ lib.nombre }}</td>
-      <td>{{ lib.categoria.nombre }}</td>
+      <td>{{ lib.titulo }}</td>
+      <td>{{ lib.categoria.categoria }}</td>
+      <td>{{ lib.editorial.nombre }}</td>
       <td>{{ lib.autor }}</td>
-      <td><a href="{% url 'libros:editarlibro' lib.id %}"> <span>Editar</span></a></td>
-      <td><a href=""><span>Eliminar</span></a></td>
+      <td><a href="{% url 'libros:editarlibro' lib.id %}" class="btn btn-block btn-success"> <span class="glyphicon glyphicon-edit"></span><span>Editar</span></a></td>
+      <td><a href="{% url 'libros:eliminarlibro' lib.id %}" class="btn btn-block btn-danger"><span class="glyphicon glyphicon-erase"></span><span>Eliminar</span></a></td>
 
 
 
@@ -29,4 +32,5 @@
   {% endfor %}
   </tbody>
 </table>
+
 {% endblock %}

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
-{% block contenido %}
-<div class="container">
-    <div class="col sm-6">
+{% block title %}Create Book{% endblock %}
+{% block content %}
+    {% block titlecontent %}Create New Book {% endblock %}
+    {% block titleform %}{% endblock %}
         <form method="post">
-    {% csrf_token %}
-    {{  form.as_p }}
-    <button type="submit">Guardar</button>
-</form>
-    </div>
-</div>
+            {% csrf_token %}
+            {{  form.as_p }}
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+
 {% endblock %}
